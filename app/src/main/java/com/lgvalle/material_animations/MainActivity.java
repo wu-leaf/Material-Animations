@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         setupWindowAnimations();
         setupSamples();
         setupToolbar();
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         slideTransition.setDuration(getResources().getInteger(R.integer.anim_duration_long));
         getWindow().setReenterTransition(slideTransition);
         getWindow().setExitTransition(slideTransition);
+
     }
 
     private void setupSamples() {
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupLayout() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.sample_list);
-        recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);//设置固定大小
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         SamplesRecyclerAdapter samplesRecyclerAdapter = new SamplesRecyclerAdapter(this, samples);
         recyclerView.setAdapter(samplesRecyclerAdapter);

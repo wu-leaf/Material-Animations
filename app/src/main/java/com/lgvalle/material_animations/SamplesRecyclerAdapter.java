@@ -57,6 +57,7 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
     private void transitionToActivity(Class target, Sample sample) {
         final Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants(activity, true);
         startActivity(target, pairs, sample);
+
     }
 
 

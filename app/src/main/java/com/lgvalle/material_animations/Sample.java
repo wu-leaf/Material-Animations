@@ -9,6 +9,7 @@ import java.io.Serializable;
 
 /**
  * Created by lgvalle on 04/09/15.
+ * 实体对象，实现序列化
  */
 public class Sample implements Serializable {
 
@@ -16,10 +17,10 @@ public class Sample implements Serializable {
     private final String name;
 
     public Sample(@ColorRes int color, String name) {
-        this.color = color;
-        this.name = name;
+        this.color = color;//设定颜色
+        this.name = name;  //设定文字
     }
-
+    //这个没看懂
     @BindingAdapter("bind:colorTint")
     public static void setColorTint(ImageView view, @ColorRes int color) {
         DrawableCompat.setTint(view.getDrawable(), color);
